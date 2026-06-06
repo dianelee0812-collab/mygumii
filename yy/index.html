@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안락한 가정의 도시, 김포 | 마이구미</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Jua&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandDeepPurple: '#433174',
+                        brandLightPurple: '#b7a6c5',
+                        brandNeonGreen: '#9ac847',
+                        brandMutedPurple: '#7f70a9',
+                        brandCream: '#ededdf',
+                        brandOliveGray: '#c4c4a9'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* 각 페이지가 딱딱 끊어져 스크롤되도록 스냅 기능 구현 */
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+        }
+        body {
+            font-family: 'Pretendard', sans-serif;
+            background-color: #ededdf; /* #ededdf 이용 */
+        }
+        .retro-title {
+            font-family: 'Black Han Sans', sans-serif;
+        }
+        .retro-sub {
+            font-family: 'Jua', sans-serif;
+        }
+        .risograph-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.04'/%3E%3C/svg%3E");
+        }
+        /* 각 섹션을 화면 크기에 고정하고 스크롤 스냅 타겟으로 설정 */
+        .page-section {
+            scroll-snap-align: start;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body class="risograph-texture text-[#1A1A1A] antialiased">
+
+    <nav class="border-b-4 border-[#1A1A1A] bg-[#9ac847] px-6 py-4 sticky top-0 z-50 flex justify-between items-center">
+        <div class="retro-title text-2xl tracking-wider select-none text-[#433174]">🍇 MY GUMI</div>
+        <div class="hidden md:flex gap-6 retro-sub text-base lg:text-lg text-[#433174]">
+            <a href="#hero" class="hover:underline">HOME</a>
+            <a href="#about" class="hover:underline">ABOUT 김포</a>
+            <a href="#data" class="hover:underline">김포 정보</a>
+            <a href="#shop" class="hover:underline">SHOP</a>
+            <a href="#brand" class="hover:underline">브랜드 스토리</a>
+            <a href="#station" class="hover:underline">골드라인 프로젝트</a>
+        </div>
+        <a href="https://www.gimpo.go.kr" target="_blank" class="border-2 border-[#1A1A1A] bg-white px-3 py-1 font-bold shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] text-[#433174] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_rgba(26,26,26,1)] transition-all">
+            GIMPO 🔗
+        </a>
+    </nav>
+
+    <header id="hero" class="page-section container mx-auto px-6 text-center -mt-[76px] pt-[76px]">
+        <h1 class="retro-title text-5xl md:text-8xl text-[#433174] tracking-tight mb-8 drop-shadow-[4px_4px_0px_rgba(154,200,71,1)]">
+            안락한 가정의 도시, 김포
+        </h1>
+        <p class="max-w-2xl text-lg md:text-xl font-medium leading-relaxed mb-12 text-[#7f70a9] px-4 mx-auto">
+            오천년 역사 최초의 벼농사 발상지이자 서해 해풍과 한강이 감싸 안은 풍요로운 도시 <br class="hidden md:inline">
+            포도송이처럼 옹기종기 모여 가정을 이루고 우리의 일상이 달콤하게 자라나는 김포에 오신 것을 환영합니다.
+        </p>
+        <div class="mx-auto">
+            <a href="#shop" class="retro-sub text-2xl border-4 border-[#1A1A1A] bg-[#9ac847] text-[#433174] px-12 py-5 rounded-full shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-[3px_3px_0px_0px_rgba(26,26,26,1)] transition-all inline-flex items-center gap-3 group">
+                오각 굿즈 보러가기 
+                <span class="inline-block group-hover:rotate-12 transition-transform">🍇</span>
+            </a>
+        </div>
+    </header>
+
+    <div class="bg-[#433174] text-[#ededdf] py-3 border-t-4 border-b-4 border-[#1A1A1A] text-center font-bold tracking-widest overflow-hidden whitespace-nowrap text-xs md:text-sm sticky top-[76px] z-40">
+        LOCAL BRANDING PROJECT BY MY GUMI × GIMPO CITY BRAND CO-CREATION • 함께 영그는 일상 • LOCAL BRANDING PROJECT BY MY GUMI × GIMPO CITY BRAND CO-CREATION
+    </div>
+
+    <section id="about" class="page-section container mx-auto px-6 py-12 justify-center">
+        <h2 class="retro-title text-4xl md:text-6xl text-center text-[#433174] mb-2 uppercase tracking-wider">
+            ABOUT GIMPO
+        </h2>
+        <p class="text-center font-medium text-lg text-[#7f70a9] mb-12">자연과 도시, 역사와 생태가 어우러지는 독특한 정체성</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto w-full">
+            <div class="border-4 border-[#1A1A1A] bg-white p-8 shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] flex flex-col justify-between">
+                <div>
+                    <div class="text-[#433174] text-4xl mb-4"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <h3 class="retro-title text-2xl mb-4 text-[#1A1A1A]">수도권 서북부의 중심</h3>
+                    <p class="text-[#7f70a9] leading-relaxed text-sm md:text-base">
+                        동쪽으로는 서울 강서구, 서쪽으로는 강화군, 남쪽으로는 인천 계양·부평구와 맞닿아 있으며, 북쪽으로는 한강을 사이에 두고 파주시 및 북한 개풍군과 접경한 중요한 거점입니다.
+                    </p>
+                </div>
+                <div class="mt-6 p-3 bg-[#c4c4a9] border-2 border-[#1A1A1A] text-xs font-bold space-y-1 rounded text-[#433174]">
+                    <div>🚗 서울 여의도까지 약 20분 (한강로 이용)</div>
+                    <div>✈️ 김포공항 약 5분 / 인천공항 약 30분</div>
+                </div>
+            </div>
+
+            <div class="border-4 border-[#1A1A1A] bg-white p-8 shadow-[6px_6px_0px_0px_rgba(26,26,26,1)]">
+                <div class="text-[#433174] text-4xl mb-4"><i class="fa-solid fa-wheat-awn"></i></div>
+                <h3 class="retro-title text-2xl mb-4 text-[#1A1A1A]">오천년 농경 문화의 숨결</h3>
+                <p class="text-[#7f70a9] leading-relaxed text-sm md:text-base">
+                    대한민국 최초로 벼농사가 시작된 역사 깊은 고장으로, 예로부터 임금님 수라상에 오르던 명품 <strong>'김포금쌀'</strong>의 발상지입니다. 비옥한 토양과 풍요로운 상생의 가치를 간직하고 있습니다.
+                </p>
+            </div>
+
+            <div class="border-4 border-[#1A1A1A] bg-[#9ac847] p-8 shadow-[6px_6px_0px_0px_rgba(26,26,26,1)]">
+                <div class="text-[#433174] text-4xl mb-4"><i class="fa-solid fa-water"></i></div>
+                <h3 class="retro-title text-2xl mb-4 text-[#433174]">강과 운하의 독특한 지형</h3>
+                <p class="text-[#433174] leading-relaxed font-medium text-sm md:text-base">
+                    도시 전체가 아름다운 강과 아라뱃길 운하로 둘러싸여 자연과 현대적 도시가 조화를 이룹니다. 서해 해풍과 큰 일교차 덕분에 당도 높은 최고의 <strong>'김포포도'</strong>가 자라나는 기적의 터전입니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="data" class="page-section bg-[#433174] text-white py-12 border-t-4 border-b-4 border-[#1A1A1A] risograph-texture justify-center">
+        <div class="container mx-auto px-6 max-w-6xl w-full">
+            <h2 class="retro-title text-4xl md:text-6xl text-center text-[#9ac847] mb-4 tracking-wider">
+                GIMPO IN DATA
+            </h2>
+            <p class="text-center font-medium text-[#b7a6c5] mb-12">공식 포털 데이터를 기반으로 한 김포시의 현황</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center mb-10 text-[#1A1A1A]">
+                <div class="border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
+                    <div class="text-xs font-bold text-[#7f70a9] uppercase mb-1">총 인구수 (2025.7)</div>
+                    <div class="retro-title text-2xl text-[#433174]">517,309명</div>
+                    <div class="text-[10px] text-[#7f70a9] mt-1">*등록외국인/국내거소자 포함</div>
+                </div>
+                <div class="border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
+                    <div class="text-xs font-bold text-[#7f70a9] uppercase mb-1">총 세대수</div>
+                    <div class="retro-title text-2xl text-[#433174]">206,573세대</div>
+                    <div class="text-[10px] text-[#7f70a9] mt-1">따뜻하게 옹기종기 모인 가정</div>
+                </div>
+                <div class="border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
+                    <div class="text-xs font-bold text-[#7f70a9] uppercase mb-1">총 면적</div>
+                    <div class="retro-title text-2xl text-[#433174]">약 276.6㎢</div>
+                    <div class="text-[10px] text-[#7f70a9] mt-1">수변 생태와 평야의 광활함</div>
+                </div>
+                <div class="border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)]">
+                    <div class="text-xs font-bold text-[#7f70a9] uppercase mb-1">공무원 현황</div>
+                    <div class="retro-title text-2xl text-[#433174]">1,701명</div>
+                    <div class="text-[10px] text-[#7f70a9] mt-1">공무원 1인당 시민 304명 케어</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                <div class="lg:col-span-6 border-4 border-[#1A1A1A] bg-[#2A2A2A] p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <h3 class="retro-sub text-xl text-[#9ac847] mb-4 border-b border-gray-600 pb-2">📈 연도별 폭발적 인구 성장 추이</h3>
+                    <div class="space-y-3 text-sm">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-0.5"><span>1998년</span><span>약 13만 명</span></div>
+                            <div class="w-full bg-gray-700 h-2.5 rounded-full overflow-hidden"><div class="bg-[#9ac847] h-full" style="width: 25%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-0.5"><span>2000년</span><span>약 16만 명</span></div>
+                            <div class="w-full bg-gray-700 h-2.5 rounded-full overflow-hidden"><div class="bg-[#9ac847] h-full" style="width: 31%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-0.5"><span>2010년</span><span>약 30만 명</span></div>
+                            <div class="w-full bg-gray-700 h-2.5 rounded-full overflow-hidden"><div class="bg-[#9ac847] h-full" style="width: 58%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-0.5"><span>2020년</span><span>약 43만 명</span></div>
+                            <div class="w-full bg-gray-700 h-2.5 rounded-full overflow-hidden"><div class="bg-[#9ac847] h-full" style="width: 83%"></div></div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold mb-0.5"><span class="text-[#9ac847]">2024년 이후 현재</span><span class="text-[#9ac847] font-bold">약 51만 명+</span></div>
+                            <div class="w-full bg-gray-700 h-2.5 rounded-full overflow-hidden"><div class="bg-[#9ac847] h-full" style="width: 100%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6 border-4 border-[#1A1A1A] bg-[#ededdf] text-[#1A1A1A] p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <h3 class="retro-sub text-xl text-[#433174] mb-3 border-b border-gray-300 pb-2">🗺️ 행정구역 및 예산 규모</h3>
+                    <div class="mb-4">
+                        <div class="text-xs font-bold text-[#433174] mb-1">행정구역 편제 (3읍 3면 8동)</div>
+                        <p class="text-xs md:text-sm leading-relaxed text-gray-700">
+                            <strong>읍:</strong> 통진읍, 고촌읍, 양촌읍<br>
+                            <strong>면:</strong> 대곶면, 월곶면, 하성면<br>
+                            <strong>동:</strong> 김포본동, 장기본동, 사우동, 풍무동, 장기동, 구래동, 마산동, 운양동
+                        </p>
+                    </div>
+                    <div class="pt-2 border-t border-dashed border-gray-300">
+                        <div class="text-xs font-bold text-[#433174] mb-0.5">2025년 본예산 기준 재정 규모</div>
+                        <div class="retro-title text-2xl mb-1 text-[#1A1A1A]">1조 7,746억원</div>
+                        <div class="text-[11px] text-[#7f70a9] font-medium leading-tight">재정 자립도 33.41% | 일반회계 1조 4,581억 · 특별회계 2,112억 · 기금 1,053억</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="page-section container mx-auto px-6 py-12 justify-center">
+        <h2 class="retro-title text-4xl md:text-6xl text-center text-[#433174] mb-2 uppercase tracking-wider">
+            O-GAK GOODS SHOP
+        </h2>
+        <p class="text-center font-medium text-lg text-[#7f70a9] mb-12">굿즈 상품 카드를 선택하면 우측 영수증 판넬에 실시간 정보와 가격이 정렬됩니다.</p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-6xl mx-auto w-full">
+            <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+                
+                <div onclick="selectProduct('keyring', '서리 맞은 포도 자석 키링', 3500, '벨벳 파우더의 포슬포슬한 촉감과 내오디뮴 자석 결합 스토리. 흩어지면 가족의 독립, 모이면 포도송이처럼 단단한 결합을 상징합니다. 세라믹 클레이로 제작 후 건조 및 특수 염색 마감을 거쳤습니다.')" 
+                     class="product-card border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] transition-all cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block bg-[#433174] text-white font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-2 retro-sub">TOUCH / 촉각</span>
+                        <h3 class="retro-title text-lg text-[#1A1A1A]">서리 맞은 포도 자석 키링</h3>
+                        <div class="mt-2 w-full h-36 border-2 border-[#1A1A1A] overflow-hidden bg-[#ededdf] rounded-sm">
+                            <img src="이미지2/KakaoTalk_20260607_001926620_01.jpg" alt="서리 맞은 포도 자석 키링 실물" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="retro-sub text-right text-base text-[#433174] mt-2">3,500원</div>
+                </div>
+
+                <div onclick="selectProduct('incense', '포도송이 인센스 홀더', 7000, '세라믹 클레이 핸드메이드 홀더 + 달콤하고 청량한 청포도 향 인센스 스틱 20입 구성. 기존 가이드 툴의 인덱스 홀딩 수평 마감 길이를 정밀하게 개선 보완한 실용적 소품입니다.')" 
+                     class="product-card border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] transition-all cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <span class="inline-block bg-[#9ac847] text-[#433174] font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-2 retro-sub">SMELL / 후각</span>
+                        <h3 class="retro-title text-lg text-[#1A1A1A]">포도송이 인센스 홀더</h3>
+                        <div class="mt-2 w-full h-36 border-2 border-[#1A1A1A] overflow-hidden bg-[#ededdf] rounded-sm">
+                            <img src="이미지파일1/KakaoTalk_20260607_001926620.jpg" alt="포도송이 인센스 홀더 실물" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <div class="retro-sub text-right text-base text-[#433174] mt-2">7,000원</div>
+                </div>
+
+                <div onclick="selectProduct('postcard', '김포 엽서', 1500, '버려지는 종이를 직접 물에 불리고 틀에 떠서 제작한 100% 친환경 수제 재생지 엽서. 아날로그 리소그래피 무드로 김포의 사계절을 힙하게 묘사했습니다.')" 
+                     class="product-card border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] transition-all cursor-pointer">
+                    <span class="inline-block bg-[#433174] text-white font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-2 retro-sub">VISION / 시각</span>
+                    <h3 class="retro-title text-lg text-[#1A1A1A]">김포 엽서</h3>
+                    <div class="retro-sub text-right text-base text-[#433174] mt-2">1,500원</div>
+                </div>
+
+                <div onclick="selectProduct('asmr', '김포 자연 ASMR 사운드 QR 카드', 1500, '빈티지 QR 코드를 스캔하여 청취하는 힐링 링크 카드. 은은하게 흐르는 김포 포도밭의 가을 바람 소리와 대명항의 잔잔한 파도 소리가 심리적 안정을 제공합니다.')" 
+                     class="product-card border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] transition-all cursor-pointer">
+                    <span class="inline-block bg-[#9ac847] text-[#433174] font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-2 retro-sub">HEARING / 청각</span>
+                    <h3 class="retro-title text-lg text-[#1A1A1A]">김포 자연 ASMR QR 카드</h3>
+                    <div class="retro-sub text-right text-base text-[#433174] mt-2">1,500원</div>
+                </div>
+
+                <div onclick="selectProduct('candy', '유리병 김포 포도 알사탕', 6000, '아기자기한 미니 유리병 패키지에 옹기종기 담긴 보라색 수제 알사탕. 김포 특산 포도 과즙을 아끼지 않고 가득 졸여내어 진한 상큼함을 전합니다.')" 
+                     class="product-card border-4 border-[#1A1A1A] bg-white p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] transition-all cursor-pointer">
+                    <span class="inline-block bg-[#433174] text-white font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-2 retro-sub">TASTE / 미각</span>
+                    <h3 class="retro-title text-lg text-[#1A1A1A]">유리병 김포 포도 알사탕</h3>
+                    <div class="retro-sub text-right text-base text-[#433174] mt-2">6,000원</div>
+                </div>
+
+                <div onclick="selectProduct('package', '풀 패키지 세트', 15500, '다섯 가지 감각 굿즈 전체 구성품과 크래프트 재질의 스페셜 띠지 박스 패키징이 모두 포함된 프리미엄 올인원 컬렉션입니다. (세트 스페셜 패키징 특별 할인가 적용)')" 
+                     class="product-card border-4 border-[#1A1A1A] bg-[#9ac847] p-4 shadow-[4px_4px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(26,26,26,1)] transition-all cursor-pointer">
+                    <span class="inline-block bg-[#433174] text-white font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-1 retro-sub">ALL IN ONE / 풀 패키지</span>
+                    <h3 class="retro-title text-lg text-[#1A1A1A]">풀 패키지</h3>
+                    <div class="retro-sub text-right text-base text-[#433174] mt-1"><span class="text-xs line-through text-gray-600 mr-2">19,500원</span>15,500원</div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-4 border-4 border-[#1A1A1A] bg-[#c4c4a9] p-6 shadow-[6px_6px_0px_0px_rgba(26,26,26,1)] flex flex-col justify-between min-h-[380px]">
+                <div>
+                    <h3 class="retro-title text-xl text-[#1A1A1A] mb-4 border-b-2 border-[#1A1A1A] pb-2">🛒 선택 상품 계산서</h3>
+                    
+                    <div id="selected-empty-state" class="text-center py-16 text-gray-700 font-medium text-xs md:text-sm">
+                        왼쪽 굿즈 목록에서<br>상세 정보와 가격을 볼 상품을 선택해 주세요!
+                    </div>
+
+                    <div id="selected-product-panel" class="hidden space-y-4">
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#433174]">선택된 상품명</span>
+                            <h4 id="receipt-name" class="retro-title text-xl text-[#1A1A1A] mt-0.5">-</h4>
+                        </div>
+                        <div>
+                            <span class="text-[10px] font-bold uppercase tracking-wider text-[#7f70a9]">제품 상세 정보</span>
+                            <p id="receipt-desc" class="text-xs text-[#444] leading-relaxed mt-0.5">-</p>
+                        </div>
+                        <div class="pt-4 border-t border-dashed border-gray-400">
+                            <div class="flex justify-between items-center">
+                                <span class="font-bold text-xs">최종 결제 금액</span>
+                                <span id="receipt-price" class="retro-sub text-xl text-[#433174]">0원</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-6 border-t-2 border-[#1A1A1A] pt-4">
+                    <button onclick="alert('본 스토어는 마이구미 팀의 프로젝트학습 및 리브랜딩 보고서 발표용 데모 프로그램입니다. 선택해 주셔서 감사합니다!')" class="retro-sub w-full text-lg bg-[#433174] text-[#ededdf] text-center py-3 border-2 border-[#1A1A1A] shadow-[3px_3px_0px_0px_rgba(26,26,26,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[1px_1px_0px_0px_rgba(26,26,26,1)] transition-all cursor-pointer">
+                        소장하기 주문신청
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="brand" class="page-section bg-[#433174] text-white py-12 border-t-4 border-b-4 border-[#1A1A1A] risograph-texture justify-center">
+        <div class="container mx-auto px-6 max-w-5xl w-full">
+            <h2 class="retro-title text-4xl md:text-6xl text-[#9ac847] text-center mb-2 uppercase tracking-wider">
+                BRAND STORY
+            </h2>
+            <p class="text-center font-medium text-lg text-[#ededdf] mb-12">마이구미 팀이 그리는 김포의 새로운 내일</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-[#1A1A1A]">
+                <div class="border-4 border-[#1A1A1A] bg-white p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <span class="inline-block bg-[#433174] text-white font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-3 retro-sub">SLOGAN</span>
+                    <h3 class="retro-title text-2xl text-[#433174] mb-3">김포, 함께 영그는 일상</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        신혼부부와 아이 등 젊은 가구 유입이 많은 대도시 김포의 특성을 살려, 차갑고 삭막한 베드타운이라는 인식을 넘어 <strong>'따뜻하고 정서적인 홈타운(Home)'</strong>의 정체성을 제안합니다. 포도가 영그는 과정처럼 시민의 삶과 공동체가 단단하게 성숙함을 상징합니다.
+                    </p>
+                </div>
+
+                <div class="border-4 border-[#1A1A1A] bg-white p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <span class="inline-block bg-[#9ac847] text-[#433174] font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-3 retro-sub">DESIGN MOTIF</span>
+                    <h3 class="retro-title text-2xl text-[#1A1A1A] mb-3">포도송이와 상생의 가치</h3>
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        한 송이 안에 옹기종기 긴밀하게 결합된 포도알은 번성과 상생, 다산을 의미합니다. 이는 각자의 보금자리들이 모여 하나의 풍요롭고 살기 좋은 김포 공동체를 구성하는 정(情) 문화와 완벽하게 대칭을 이룹니다.
+                    </p>
+                    </div>
+
+                    <div class="border-4 border-[#1A1A1A] bg-white p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <span class="inline-block bg-[#9ac847] text-[#433174] font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-3 retro-sub">DESIGN MOTIF</span>
+                    <h3 class="retro-title text-2xl text-[#1A1A1A] mb-3">LOGO</h3>
+                      <img src="이미지2/KakaoTalk_20260607_010730166.jpg" alt="로고디자인" class="w-full">
+                        </div>
+
+                        <div class="border-4 border-[#1A1A1A] bg-white p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <span class="inline-block bg-[#9ac847] text-[#433174] font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-3 retro-sub">DESIGN MOTIF</span>
+                    <h3 class="retro-title text-2xl text-[#1A1A1A] mb-3">Pattern Design</h3>
+                      <img src="이미지2/PatternedAI-pattern-tile-1777991015021.png" alt="패턴디자인" class="w-full">
+                        </div>
+
+                        <div class="border-4 border-[#1A1A1A] bg-white p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <span class="inline-block bg-[#9ac847] text-[#433174] font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-3 retro-sub">DESIGN MOTIF</span>
+                    <h3 class="retro-title text-2xl text-[#1A1A1A] mb-3">COLOR</h3>
+                      <img src="이미지2/KakaoTalk_20260607_011502950.jpg" alt="색과 폰트" class="w-full">
+                        </div>
+
+                        <div class="border-4 border-[#1A1A1A] bg-white p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <span class="inline-block bg-[#9ac847] text-[#433174] font-bold text-[10px] px-2 py-0.5 border border-[#1A1A1A] mb-3 retro-sub">DESIGN MOTIF</span>
+                    <h3 class="retro-title text-2xl text-[#1A1A1A] mb-3">MASCOT</h3>
+                      <img src="이미지2/일러스트13.png" alt="마스코드" class="w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="station" class="page-section bg-[#1A1A1A] text-white py-12 border-t-4 border-[#1A1A1A] risograph-texture justify-center">
+        <div class="container mx-auto px-6 max-w-6xl w-full">
+            <h2 class="retro-title text-4xl md:text-6xl text-[#9ac847] text-center mb-2 tracking-wider">
+                GIMPO GOLDLINE SOLUTION
+            </h2>
+            <p class="text-center font-medium text-sm text-[#c4c4a9] mb-12 max-w-xl mx-auto">일상의 무거운 이동 공간인 골드라인 내부를 포도의 싱그러움과 집 거실 같은 안락함으로 채우는 공익 공공디자인 기획</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div class="border-4 border-white bg-[#2A2A2A] p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <div class="text-[#9ac847] text-2xl mb-3"><i class="fa-solid fa-eye"></i></div>
+                    <h3 class="retro-sub text-xl text-white mb-2">청포도 스크린도어 컬러테라피</h3>
+                    <p class="text-xs md:text-sm text-[#b7a6c5] leading-relaxed">지하철역 내부의 폐쇄감을 줄이기 위해 승강장 전면과 기둥 상단에 싱그러운 청포도밭 그라데이션 및 일러스트 랩핑을 적용합니다. 녹색 계열의 배색은 대기 승객의 심박수를 낮추고 시각적 스트레스를 완화합니다.</p>
+                </div>
+
+                <div class="border-4 border-white bg-[#2A2A2A] p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <div class="text-[#9ac847] text-2xl mb-3"><i class="fa-solid fa-shoe-prints"></i></div>
+                    <h3 class="retro-sub text-xl text-white mb-2">포도송이 넛지 거리두기 발판</h3>
+                    <p class="text-xs md:text-sm text-[#b7a6c5] leading-relaxed">딱딱한 기존의 대기 유도선 대신 아기자기한 포도알 모양의 바닥 그래픽 발판을 배치합니다. 직관적이고 귀여운 디자인을 밟고 서게 유도함으로써, 혼잡한 승강장 내에서 승객 간 자연스러운 심리적 안정 거리를 확보합니다.</p>
+                </div>
+
+                <div class="border-4 border-white bg-[#2A2A2A] p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <div class="text-[#9ac847] text-2xl mb-3"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3 class="retro-sub text-xl text-white mb-2">포도 성숙도 혼잡도 판넬</h3>
+                    <p class="text-xs md:text-sm text-[#b7a6c5] leading-relaxed">열차 내 혼잡 정보를 유쾌하게 재해석합니다. 여유로운 상태는 '싱그러운 청포도', 보통은 '익어가는 보라포도', 혼잡 단계는 '알이 꽉 찬 포도송이' 아이콘으로 전광판에 표기하여 가독성과 심리적 유연성을 높입니다.</p>
+                </div>
+
+                <div class="border-4 border-white bg-[#2A2A2A] p-6 shadow-[6px_6px_0px_0px_rgba(154,200,71,1)]">
+                    <div class="text-[#9ac847] text-2xl mb-3"><i class="fa-solid fa-gamepad"></i></div>
+                    <h3 class="retro-sub text-xl text-white mb-2">대기 공간 포도 밟기 게미피케이션</h3>
+                    <p class="text-xs md:text-sm text-[#b7a6c5] leading-relaxed">대기 중 느끼는 피로감을 놀이 경험으로 전환합니다. 착시 아트를 활용한 바닥 미니 게임 존을 구성하고, 역사 내 포도나무 QR코드를 통해 스마트폰으로 가볍게 즐기는 '포도 수확 AR 미니게임'을 제공하여 지루함을 상쇄합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t-4 border-[#1A1A1A] bg-[#ededdf] py-10 text-center px-6 scroll-snap-align-end">
+        <h3 class="retro-title text-3xl md:text-4xl text-[#433174] mb-2">TEAM MY GUMI</h3>
+        <p class="font-medium text-xs md:text-sm text-[#7f70a9] mb-4">지역 특산물을 활용한 친환경 굿즈 개발과 로컬 도시 리브랜딩</p>
+        <div class="text-[11px] text-[#7f70a9] tracking-wider uppercase">
+            © 2026 MY GUMI. All Rights Reserved. 연결된 공식 정보 포털: <a href="https://www.gimpo.go.kr" target="_blank" class="text-[#433174] underline font-bold">GIMPO CITY</a>
+        </div>
+    </footer>
+
+    <script>
+        function selectProduct(id, name, price, desc) {
+            document.getElementById('selected-empty-state').classList.add('hidden');
+            document.getElementById('selected-product-panel').classList.remove('hidden');
+            
+            document.getElementById('receipt-name').innerText = name;
+            document.getElementById('receipt-desc').innerText = desc;
+            document.getElementById('receipt-price').innerText = price.toLocaleString() + '원';
+            
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach(card => {
+                card.classList.remove('border-[#433174]', 'bg-[#433174]/5');
+            });
+            event.currentTarget.classList.add('border-[#433174]', 'bg-[#433174]/5');
+        }
+    </script>
+</body>
+</html>
